@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.controleAdmin">
+   <children>
+      <TabPane layoutY="49.0" prefHeight="425.0" prefWidth="715.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="LOGIN">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="184.0" layoutY="183.0" prefHeight="15.0" prefWidth="124.0" text="Senha" />
+                        <Label layoutX="115.0" layoutY="138.0" prefHeight="15.0" prefWidth="124.0" text="Nome do usuario" />
+                        <TextField fx:id="edUsuario" layoutX="234.0" layoutY="133.0" prefHeight="25.0" prefWidth="253.0" promptText="Nome do usuario" />
+                        <Button fx:id="btEntraLogin" layoutX="425.0" layoutY="216.0" mnemonicParsing="false" text="Entrar" />
+                        <Label layoutX="75.0" layoutY="66.0" prefHeight="20.0" prefWidth="550.0" text="SISTEMA DE CONTROLE DO PROCESSO DE CONSERTO DE PNEUS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="edSenha" layoutX="234.0" layoutY="177.0" prefHeight="25.0" prefWidth="251.0" promptText="Senha do usuario" />
+                        <TextField layoutX="48.0" layoutY="241.0" prefHeight="139.0" prefWidth="618.0" text="relatorio Consumo insumos + lucro por mes e qtde de consertos + lucro por cliente+Producao por funcionario+tipoIII" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Cliente">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="136.0" prefHeight="15.0" prefWidth="161.0" text="Nome PJ" />
+                        <Label layoutX="61.0" layoutY="285.0" prefHeight="15.0" prefWidth="82.0" text="Tel. celular" />
+                        <Label layoutX="385.0" layoutY="285.0" prefHeight="15.0" prefWidth="124.0" text="Tel. fixo" />
+                        <TextField fx:id="edNomePj" layoutX="156.0" layoutY="131.0" prefHeight="25.0" prefWidth="489.0" promptText="Nome da pesso Juridica" />
+                        <TextField fx:id="edCelular" layoutX="157.0" layoutY="280.0" prefHeight="25.0" prefWidth="201.0" promptText="Telefone celular" />
+                        <TextField fx:id="edFixo" layoutX="446.0" layoutY="280.0" prefHeight="25.0" prefWidth="201.0" promptText="Telefone fixo" />
+                        <Label layoutX="34.0" layoutY="247.0" prefHeight="15.0" prefWidth="124.0" text="Responsavel PJ" />
+                        <TextField fx:id="edResponsavelPJ" layoutX="157.0" layoutY="244.0" prefHeight="25.0" prefWidth="489.0" promptText="Responsavel peloa pessoa juridica" />
+                        <Label layoutX="14.0" layoutY="168.0" prefHeight="15.0" prefWidth="161.0" text="Lista de nomes PJ" />
+                        <TextField fx:id="edEmail" layoutX="157.0" layoutY="314.0" prefHeight="25.0" prefWidth="488.0" promptText="E-Mail" />
+                        <Label layoutX="92.0" layoutY="319.0" prefHeight="15.0" prefWidth="69.0" text="E-mail" />
+                        <Button fx:id="btSalvarCliente" layoutX="578.0" layoutY="356.0" mnemonicParsing="false" text="Salvar" />
+                        <Label layoutX="13.0" layoutY="62.0" prefHeight="15.0" prefWidth="161.0" text="Lista de nomes PF" />
+                        <HBox layoutX="156.0" layoutY="57.0" />
+                        <TextField fx:id="edNomePf" layoutX="156.0" layoutY="24.0" prefHeight="25.0" prefWidth="489.0" promptText="Nome da pessoa fisica" />
+                        <Label layoutX="12.0" layoutY="29.0" prefHeight="15.0" prefWidth="161.0" text="Nome PF" />
+                        <RadioButton fx:id="rdPf" layoutX="116.0" layoutY="29.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="rdPj" layoutX="111.0" layoutY="136.0" mnemonicParsing="false" />
+                        <TextField fx:id="edCnpj" layoutX="157.0" layoutY="200.0" prefHeight="25.0" prefWidth="224.0" promptText="CNPJ" />
+                        <TextField fx:id="edCpf" layoutX="157.0" layoutY="90.0" prefHeight="25.0" prefWidth="224.0" promptText="CPF" />
+                        <ComboBox fx:id="cbListNomePf" layoutX="158.0" layoutY="57.0" prefHeight="25.0" prefWidth="486.0" />
+                        <ComboBox fx:id="cbListCpf" layoutX="406.0" layoutY="90.0" prefHeight="25.0" prefWidth="238.0" />
+                        <ComboBox fx:id="cbListNomePj" layoutX="156.0" layoutY="163.0" prefHeight="25.0" prefWidth="487.0" />
+                        <ComboBox fx:id="cbListCnpj" layoutX="406.0" layoutY="200.0" prefHeight="25.0" prefWidth="238.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Pneu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="62.0" layoutY="175.0" prefHeight="15.0" prefWidth="124.0" text="Serie" />
+                        <Label layoutX="62.0" layoutY="137.0" prefHeight="15.0" prefWidth="124.0" text="Marca" />
+                        <Label layoutX="62.0" layoutY="99.0" prefHeight="15.0" prefWidth="124.0" text="Medida" />
+                        <Label layoutX="62.0" layoutY="62.0" prefHeight="15.0" prefWidth="124.0" text="Descrição" />
+                        <Label layoutX="62.0" layoutY="212.0" prefHeight="15.0" prefWidth="124.0" text="DOT" />
+                        <Label layoutX="62.0" layoutY="249.0" prefHeight="15.0" prefWidth="124.0" text="Observaçoes" />
+                        <TextArea fx:id="edObs" layoutX="160.0" layoutY="245.0" prefHeight="99.0" prefWidth="479.0" promptText="Descreva informções relevantes e/ou adicionais sobre este conserto" />
+                        <TextField fx:id="edDescricao" layoutX="160.0" layoutY="57.0" prefHeight="25.0" prefWidth="253.0" promptText="Descrição do pneu" />
+                        <TextField fx:id="edMedida" layoutX="160.0" layoutY="93.0" prefHeight="25.0" prefWidth="252.0" promptText="Medida do pneu" />
+                        <TextField fx:id="edMarca" layoutX="160.0" layoutY="131.0" prefHeight="25.0" prefWidth="252.0" promptText="Fabricante" />
+                        <TextField fx:id="edSerie" layoutX="160.0" layoutY="170.0" prefHeight="25.0" prefWidth="253.0" promptText="Numero identificador unico" />
+                        <TextField fx:id="edDot" layoutX="160.0" layoutY="207.0" prefHeight="25.0" prefWidth="251.0" promptText="DOT do pneu" />
+                        <Button fx:id="btLimparDescricao" layoutX="567.0" layoutY="355.0" mnemonicParsing="false" text="LIMPAR" />
+                        <ComboBox fx:id="cbListDescricao" layoutX="436.0" layoutY="57.0" prefHeight="25.0" prefWidth="206.0" />
+                        <ComboBox fx:id="cbListMedida" layoutX="436.0" layoutY="94.0" prefHeight="25.0" prefWidth="206.0" />
+                        <ComboBox fx:id="cbListMarca" layoutX="436.0" layoutY="131.0" prefHeight="25.0" prefWidth="206.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Serviço + Custo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="35.0" layoutY="117.0" prefHeight="15.0" prefWidth="153.0" text="Tempo vulcanizaçao" />
+                        <Label layoutX="35.0" layoutY="83.0" prefHeight="15.0" prefWidth="179.0" text="Tempo de preparo do pneu" />
+                        <Label layoutX="36.0" layoutY="151.0" prefHeight="15.0" prefWidth="176.0" text="Temperatura vulcanizaçao" />
+                        <TextField fx:id="edTempoPreparo" layoutX="224.0" layoutY="78.0" prefHeight="25.0" prefWidth="189.0" promptText="Tempo preparando o pneu" />
+                        <TextField fx:id="edTempoVulcanizacao" layoutX="225.0" layoutY="112.0" prefHeight="25.0" prefWidth="189.0" promptText="Tempo de vulcanização" />
+                        <TextField fx:id="edTemperatura" layoutX="225.0" layoutY="146.0" prefHeight="25.0" prefWidth="190.0" promptText="Temperatura de vulcan." />
+                        <Label layoutX="424.0" layoutY="83.0" prefHeight="15.0" prefWidth="76.0" text="Min" />
+                        <Label layoutX="425.0" layoutY="154.0" prefHeight="15.0" prefWidth="76.0" text="ºC" />
+                        <Label layoutX="425.0" layoutY="119.0" prefHeight="15.0" prefWidth="76.0" text="Min" />
+                        <TextField fx:id="edCustoTotal" layoutX="228.0" layoutY="251.0" prefHeight="25.0" prefWidth="187.0" promptText="Custo ao cliente" />
+                        <Label layoutX="39.0" layoutY="256.0" prefHeight="15.0" prefWidth="76.0" text="Custo Total" />
+                        <Label layoutX="35.0" layoutY="46.0" prefHeight="15.0" prefWidth="179.0" text="Data do serviço" />
+                        <DatePicker fx:id="dpDataConserto" layoutX="224.0" layoutY="41.0" prefHeight="25.0" prefWidth="190.0" promptText="Data do conserto" />
+                        <Label layoutX="39.0" layoutY="285.0" prefHeight="19.0" prefWidth="280.0" text="(Mao de obra + Vulcanizaçao + Insumos)" />
+                        <Label layoutX="428.0" layoutY="256.0" prefHeight="15.0" prefWidth="34.0" text="R$" />
+                        <TextField fx:id="edTempoRealHr" layoutX="469.0" layoutY="112.0" prefHeight="25.0" prefWidth="42.0" promptText="Hr" />
+                        <Label layoutX="568.0" layoutY="117.0" prefHeight="15.0" prefWidth="76.0" text="Tempo real" />
+                        <TextField fx:id="edTemperaturaReal" layoutX="469.0" layoutY="144.0" prefHeight="25.0" prefWidth="94.0" />
+                        <Label layoutX="569.0" layoutY="149.0" prefHeight="15.0" prefWidth="126.0" text="Temperatura real" />
+                        <Label layoutX="38.0" layoutY="185.0" prefHeight="15.0" prefWidth="124.0" text="Responsavel" />
+                        <RadioButton fx:id="rdTipoI" layoutX="226.0" layoutY="217.0" mnemonicParsing="false" text="Tipo I" />
+                        <RadioButton fx:id="rdTipoII" layoutX="318.0" layoutY="218.0" mnemonicParsing="false" text="Tipo II" />
+                        <Label layoutX="38.0" layoutY="221.0" prefHeight="15.0" prefWidth="124.0" text="Tipo de conserto" />
+                        <RadioButton fx:id="rdLigar" layoutX="471.0" layoutY="182.0" mnemonicParsing="false" text="Ligado" textFill="#f80303">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rdDesligar" layoutX="557.0" layoutY="183.0" mnemonicParsing="false" text="Desligado" textFill="#155716" />
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="597.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/off.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="508.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/on.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btSalvarConserto" layoutX="526.0" layoutY="341.0" mnemonicParsing="false" onAction="#salvarConserto" text="Salvar" />
+                        <ComboBox fx:id="cbListResponsavel" layoutX="224.0" layoutY="184.0" prefHeight="25.0" prefWidth="188.0" />
+                        <Button fx:id="btUnoLigar" layoutX="483.0" layoutY="209.0" mnemonicParsing="false" onAction="#unoLigar" text="Ligar" />
+                        <TextField fx:id="edTempoRealMin" layoutX="520.0" layoutY="112.0" prefHeight="25.0" prefWidth="44.0" promptText="Min" />
+                        <Label layoutX="513.0" layoutY="112.0" prefHeight="15.0" prefWidth="12.0" text=":">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Pesquisar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rdRadioBuscaCPF" layoutX="159.0" layoutY="111.0" mnemonicParsing="false" text="CPF" />
+                        <RadioButton fx:id="rdBuscaCNPJ" layoutX="431.0" layoutY="111.0" mnemonicParsing="false" text="CNPJ" />
+                        <TextField fx:id="edResResponsavel" layoutX="123.0" layoutY="321.0" prefHeight="25.0" prefWidth="255.0" promptText="Resultado da pesquisa" />
+                        <TextField fx:id="edResDot" layoutX="124.0" layoutY="287.0" prefHeight="25.0" prefWidth="253.0" promptText="Resultado da pesquisa" />
+                        <TextField fx:id="edResMarca" layoutX="124.0" layoutY="220.0" prefHeight="25.0" prefWidth="252.0" promptText="Resultado da pesquisa" />
+                        <TextField fx:id="edResDescricao" layoutX="124.0" layoutY="186.0" prefHeight="25.0" prefWidth="251.0" promptText="Resultado da pesquisa" />
+                        <TextField fx:id="edResMedida" layoutX="124.0" layoutY="254.0" prefHeight="25.0" prefWidth="253.0" promptText="Resultado da pesquisa" />
+                        <Label layoutX="30.0" layoutY="293.0" prefHeight="15.0" prefWidth="124.0" text="DOT" />
+                        <Label layoutX="30.0" layoutY="191.0" prefHeight="15.0" prefWidth="124.0" text="Descrição" />
+                        <Label layoutX="30.0" layoutY="260.0" prefHeight="15.0" prefWidth="124.0" text="Medida" />
+                        <Label layoutX="30.0" layoutY="327.0" prefHeight="15.0" prefWidth="124.0" text="Responsavel" />
+                        <RadioButton fx:id="rdBuscarNomePF" layoutX="40.0" layoutY="38.0" mnemonicParsing="false" text="Nome (p. fisica)" />
+                        <RadioButton fx:id="rdBuscarRazaoSocialPJ" layoutX="41.0" layoutY="76.0" mnemonicParsing="false" text="Razao Social" />
+                        <Label layoutX="30.0" layoutY="225.0" prefHeight="15.0" prefWidth="124.0" text="Marca" />
+                        <Label layoutX="162.0" layoutY="8.0" prefHeight="15.0" prefWidth="337.0" text="(Primeiramente selecione o tipo de pesquisa)" />
+                        <Label layoutX="33.0" layoutY="149.0" prefHeight="15.0" prefWidth="251.0" text="Filtrar por numero de serie do pneu" />
+                        <Label layoutX="438.0" layoutY="338.0" prefHeight="15.0" prefWidth="251.0" text="Data do ultimo serviço neste pneu" />
+                        <TextField fx:id="edResData" layoutX="438.0" layoutY="357.0" prefHeight="25.0" prefWidth="255.0" promptText="Resultado da pesquisa" />
+                        <Label layoutX="440.0" layoutY="183.0" prefHeight="15.0" prefWidth="251.0" text="Filtrar por data" />
+                        <Label layoutX="439.0" layoutY="287.0" prefHeight="15.0" prefWidth="262.0" text="Temperatura de vulcanizaçao utilizada" />
+                        <TextField fx:id="edResTemperatura" layoutX="438.0" layoutY="306.0" prefHeight="25.0" prefWidth="255.0" promptText="Resultado da pesquisa" />
+                        <Label layoutX="30.0" layoutY="361.0" prefHeight="15.0" prefWidth="124.0" text="Custo total" />
+                        <TextField fx:id="edResCustoTotal" layoutX="123.0" layoutY="355.0" prefHeight="25.0" prefWidth="255.0" promptText="Resultado da pesquisa" />
+                        <Label layoutX="439.0" layoutY="235.0" prefHeight="15.0" prefWidth="251.0" text="Tempo de vulcanizaçao utilizado" />
+                        <TextField fx:id="edResTempo" layoutX="438.0" layoutY="255.0" prefHeight="25.0" prefWidth="255.0" promptText="Resultado da pesquisa" />
+                        <DatePicker fx:id="dpDataPesquisa" layoutX="440.0" layoutY="201.0" prefHeight="25.0" prefWidth="176.0" promptText="Data" />
+                        <ComboBox fx:id="cbListNomePfPesq" layoutX="222.0" layoutY="35.0" prefHeight="25.0" prefWidth="461.0" />
+                        <ComboBox fx:id="cbListNomePjPesq" layoutX="223.0" layoutY="73.0" prefHeight="25.0" prefWidth="459.0" />
+                        <ComboBox fx:id="cbListCpfPesq" layoutX="223.0" layoutY="107.0" prefHeight="25.0" prefWidth="184.0" />
+                        <ComboBox fx:id="cbListCnpjPesq" layoutX="499.0" layoutY="108.0" prefHeight="25.0" prefWidth="182.0" />
+                        <ComboBox fx:id="cbListPneus" layoutX="283.0" layoutY="144.0" prefHeight="25.0" prefWidth="396.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Config. custos">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="34.0" layoutY="112.0" prefHeight="15.0" prefWidth="287.0" text="Custo do Kw/h" />
+                        <Label layoutX="34.0" layoutY="78.0" prefHeight="15.0" prefWidth="345.0" text="Custo da hora de preparo do pneu (mao de obra)" />
+                        <Label layoutX="35.0" layoutY="178.0" prefHeight="15.0" prefWidth="262.0" text="Custo do manchao (media por pneu)" />
+                        <Label layoutX="35.0" layoutY="211.0" prefHeight="15.0" prefWidth="251.0" text="Custo da borracha (media por pneu)" />
+                        <TextField fx:id="edCustoManchaoI" layoutX="363.0" layoutY="171.0" prefHeight="25.0" prefWidth="74.0" promptText="Custo" />
+                        <TextField fx:id="edCustoBorrachaI" layoutX="363.0" layoutY="204.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <Label layoutX="553.0" layoutY="80.0" prefHeight="15.0" prefWidth="76.0" text="R$/h" />
+                        <Label layoutX="553.0" layoutY="112.0" prefHeight="15.0" prefWidth="76.0" text="R$" />
+                        <Label layoutX="553.0" layoutY="175.0" prefHeight="15.0" prefWidth="76.0" text="R$" />
+                        <Label layoutX="553.0" layoutY="211.0" prefHeight="15.0" prefWidth="76.0" text="R$" />
+                        <Label layoutX="35.0" layoutY="42.0" prefHeight="15.0" prefWidth="179.0" text="Data da referencia" />
+                        <DatePicker fx:id="dpDataReferencia" layoutX="363.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" promptText="Data" />
+                        <Label layoutX="35.0" layoutY="309.0" prefHeight="15.0" prefWidth="124.0" text="Margem de lucro" />
+                        <TextField fx:id="edCustoMargemI" layoutX="363.0" layoutY="304.0" prefHeight="25.0" prefWidth="72.0" promptText="Margem" />
+                        <Label layoutX="553.0" layoutY="311.0" prefHeight="15.0" prefWidth="76.0" text="\%" />
+                        <Label layoutX="553.0" layoutY="244.0" prefHeight="15.0" prefWidth="76.0" text="R$" />
+                        <TextField fx:id="edCustoColaI" layoutX="363.0" layoutY="237.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <Label layoutX="35.0" layoutY="244.0" prefHeight="15.0" prefWidth="251.0" text="Custo da cola (media por pneu)" />
+                        <Label layoutX="35.0" layoutY="277.0" prefHeight="15.0" prefWidth="251.0" text="Custo da escova (media por pneu)" />
+                        <TextField fx:id="edCustoEscovaI" layoutX="363.0" layoutY="270.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <Label layoutX="553.0" layoutY="277.0" prefHeight="15.0" prefWidth="76.0" text="R$" />
+                        <Button fx:id="btSalvaReferencia" layoutX="597.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="SALVAR" />
+                        <Label layoutX="578.0" layoutY="176.0" prefHeight="15.0" prefWidth="124.0" text="(Medio por pneu)" />
+                        <Label layoutX="579.0" layoutY="211.0" prefHeight="15.0" prefWidth="124.0" text="(Medio por pneu)" />
+                        <Label layoutX="578.0" layoutY="244.0" prefHeight="15.0" prefWidth="124.0" text="(Medio por pneu)" />
+                        <Label layoutX="578.0" layoutY="277.0" prefHeight="15.0" prefWidth="124.0" text="(Medio por pneu)" />
+                        <TextField fx:id="edCustoEscovaII" layoutX="467.0" layoutY="270.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <TextField fx:id="edCustoColaII" layoutX="467.0" layoutY="237.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <TextField fx:id="edCustoMargemII" layoutX="467.0" layoutY="304.0" prefHeight="25.0" prefWidth="72.0" promptText="Margem" />
+                        <TextField fx:id="edCustoBorrachaII" layoutX="467.0" layoutY="204.0" prefHeight="25.0" prefWidth="72.0" promptText="Custo" />
+                        <TextField fx:id="edCustoManchaoII" layoutX="467.0" layoutY="171.0" prefHeight="25.0" prefWidth="74.0" promptText="Custo" />
+                        <TextField fx:id="edCustoKwh" layoutX="467.0" layoutY="107.0" prefHeight="25.0" prefWidth="74.0" promptText="Custo" />
+                        <TextField fx:id="edCustoPreparo" layoutX="467.0" layoutY="73.0" prefHeight="25.0" prefWidth="74.0" promptText="Custo" />
+                        <Label layoutX="37.0" layoutY="342.0" prefHeight="15.0" prefWidth="324.0" text="Buscar referencias de datas anteriores" />
+                        <Label layoutX="479.0" layoutY="149.0" prefHeight="15.0" prefWidth="43.0" text="Tipo II" />
+                        <Label layoutX="379.0" layoutY="149.0" prefHeight="15.0" prefWidth="43.0" text="Tipo I" />
+                        <Label layoutX="35.0" layoutY="145.0" prefHeight="15.0" prefWidth="275.0" text="Tipo de conserto (consumo de insumos)" />
+                        <ComboBox fx:id="cbListReferencias" layoutX="360.0" layoutY="337.0" prefHeight="25.0" prefWidth="180.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Admin">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="149.0" layoutY="301.0" prefHeight="15.0" prefWidth="124.0" text="Nova senha" />
+                        <Label layoutX="115.0" layoutY="106.0" prefHeight="15.0" prefWidth="124.0" text="Nome do usuario" />
+                        <TextField fx:id="edUsuarioNovo" layoutX="234.0" layoutY="101.0" prefHeight="25.0" prefWidth="253.0" promptText="Novo usuario" />
+                        <TextField fx:id="edSenhaAtualizada" layoutX="234.0" layoutY="298.0" prefHeight="25.0" prefWidth="252.0" promptText="Senha nova" />
+                        <Button fx:id="btAddUsuario" layoutX="408.0" layoutY="191.0" mnemonicParsing="false" onAction="#addUsuario" text="Adicionar" />
+                        <Label layoutX="262.0" layoutY="58.0" prefHeight="15.0" prefWidth="165.0" text="Controle de usuarios" />
+                        <Label layoutX="128.0" layoutY="269.0" prefHeight="15.0" prefWidth="124.0" text="Buscar usuario" />
+                        <Button fx:id="btLoginAtulaizar" layoutX="366.0" layoutY="334.0" mnemonicParsing="false" text="Atualizar senha" />
+                        <TextField fx:id="edSenhaNova" layoutX="234.0" layoutY="136.0" prefHeight="25.0" prefWidth="252.0" promptText="Senha" />
+                        <Label layoutX="183.0" layoutY="139.0" prefHeight="15.0" prefWidth="124.0" text="Senha" />
+                        <Label layoutX="194.0" layoutY="171.0" prefHeight="15.0" prefWidth="124.0" text="Tipo" />
+                        <RadioButton fx:id="rdTipoAdmin" layoutX="234.0" layoutY="170.0" mnemonicParsing="false" text="Admin" />
+                        <RadioButton fx:id="rdTipoFuncionario" layoutX="313.0" layoutY="170.0" mnemonicParsing="false" text="Funcionario" />
+                        <ComboBox fx:id="cbListUsuarios" layoutX="232.0" layoutY="264.0" prefHeight="25.0" prefWidth="253.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Relatorios">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="cbTipoRelatorio" layoutX="162.0" layoutY="22.0" prefHeight="25.0" prefWidth="251.0" />
+                        <Label layoutX="37.0" layoutY="29.0" prefHeight="15.0" prefWidth="124.0" text="Tipo de relatorio" />
+                        <Button fx:id="btExibirRelatorio" layoutX="444.0" layoutY="21.0" mnemonicParsing="false" text="Exibir" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text layoutX="141.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VULCANIZADORA DE PNEUS " wrappingWidth="423.21630859375">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

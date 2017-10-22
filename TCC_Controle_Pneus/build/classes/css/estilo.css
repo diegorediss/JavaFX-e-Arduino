@@ -1,0 +1,31 @@
+/*
+    Author     : Diego
+*/
+
+.root{
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: lightgreen;
+    -fx-background-color: lightseagreen;
+    
+}
+.button{
+  -fx-background-color: gray;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: black;
+    -fx-font-size: 13px;    
+}
+
+
+.button:hover{
+    -fx-base: #1245ab;
+}
+    
+.text-field{
+  -fx-background-color: lightgoldenrodyellow;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: black;
+    -fx-font-size: 13px;    
+}
