@@ -84,6 +84,13 @@ public class Conserto implements Serializable {
     @ManyToOne
     private Usuario responsavel;
     
+    // Retornam dados reais do arduino
+    int temperaturaReal;
+    int tempoRealHr;
+    int tempoRealMin;
+
+    
+    
     
     public Conserto() {
     }
@@ -166,6 +173,32 @@ public class Conserto implements Serializable {
 
     public void setResponsavel(Usuario responsavel) {
         this.responsavel = responsavel;
+    }
+    
+    
+    
+    public int getTemperaturaReal() {
+        return temperaturaReal;
+    }
+
+    public void setTemperaturaReal(int temperaturaReal) {
+        this.temperaturaReal = temperaturaReal;
+    }
+
+    public int getTempoRealHr() {
+        return tempoRealHr;
+    }
+
+    public void setTempoRealHr(int tempoRealHr) {
+        this.tempoRealHr = tempoRealHr;
+    }
+
+    public int getTempoRealMin() {
+        return tempoRealMin;
+    }
+
+    public void setTempoRealMin(int tempoRealMin) {
+        this.tempoRealMin = tempoRealMin;
     }
     
     

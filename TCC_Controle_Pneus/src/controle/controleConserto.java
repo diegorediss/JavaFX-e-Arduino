@@ -1,12 +1,9 @@
 package controle;
 
+import app.App;
 import dao.daoConserto;
-import dao.daoUsuario;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -23,21 +20,21 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import model.Conserto;
 import model.Usuario;
+import arduino.Arduino;
 
 /**
  * FXML Controller class
  *
  * @author diego
  */
-public abstract class controleServico  implements Initializable, EventHandler<ActionEvent>  {
+public abstract class controleConserto extends App implements Initializable, EventHandler<ActionEvent>  {
 
     @FXML
-    private Tab tabServico;
+    private Tab tabConserto;
     @FXML
     private TextField edTempoPreparo;
     @FXML
@@ -63,6 +60,10 @@ public abstract class controleServico  implements Initializable, EventHandler<Ac
     @FXML
     private RadioButton rdDesligar;
     @FXML
+    private TextField edTempoRealHr;
+    @FXML
+    public TextField edTempoRealMin;
+    @FXML
     private Button btSalvarConserto;
     @FXML
     private Button btUnoLigar;
@@ -73,12 +74,12 @@ public abstract class controleServico  implements Initializable, EventHandler<Ac
     
     Conserto conserto = new Conserto();
     
-    public controleServico() {
+    public controleConserto() {
 
     }
 
     @FXML
-    private void popularTabServico(ActionEvent event) {
+    private void popularTabConserto(ActionEvent event) {
         cbListResponsavel.setItems((ObservableList) conserto.getResponsavel());
     }
 
@@ -87,6 +88,7 @@ public abstract class controleServico  implements Initializable, EventHandler<Ac
         dpDataConserto.setValue(LocalDate.now());
         // Inicia o datepicker com a data atual
     }
+    
     
     
     @FXML
@@ -114,7 +116,7 @@ public abstract class controleServico  implements Initializable, EventHandler<Ac
             try {
                 dao.incluir(conserto);
             } catch (SQLException ex) {
-                Logger.getLogger(controleServico.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(controleConserto.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         Alert alert = new Alert(Alert.AlertType.WARNING, "ok");

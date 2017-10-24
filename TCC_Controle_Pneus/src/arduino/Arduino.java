@@ -2,6 +2,7 @@ package arduino;
 
 import java.io.IOException;
 import java.util.function.Consumer;
+import controle.controleConserto;
 
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
@@ -12,6 +13,8 @@ public class Arduino {
     private SerialPort serialPort;
     private String serialPortName = "/dev/ttyUSB0";
     private boolean connected;
+    private String[] data = new String[3];
+    
 
     public Arduino() {
     }

@@ -5,6 +5,7 @@
  */
 package controle;
 
+import app.App;
 import dao.daoUsuario;
 import java.net.URL;
 import java.sql.SQLException;
@@ -27,7 +28,7 @@ import model.Usuario;
  * @author diego
  */
 
-public abstract  class controleAdmin  implements Initializable, EventHandler<ActionEvent>{
+public abstract  class controleAdmin extends App implements Initializable, EventHandler<ActionEvent>{
     
     @FXML
     private TextField edUsuarioNovo;

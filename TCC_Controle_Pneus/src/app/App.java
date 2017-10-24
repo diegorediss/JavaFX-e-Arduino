@@ -10,11 +10,12 @@ import javafx.stage.Stage;
 
 public class App extends Application {
 
+    
     @Override
     public void start(Stage primaryStage) throws IOException {
               
         Parent root = FXMLLoader.load(getClass().getResource("viewPrincipal.fxml"));        
-        primaryStage.setTitle("VULCANIZADORA - SmarTchê");
+        primaryStage.setTitle("VULCANIZADORA");
         Scene scene = new Scene(root);
         //scene.getStylesheets().add("css/estilo.css"); 
         primaryStage.setScene(scene);
